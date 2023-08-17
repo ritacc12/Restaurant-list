@@ -1,5 +1,5 @@
 {
-  "name": "Restauranlist",
+  "name": "Restaurant",
   "version": "1.0.0",
   "description": "",
   "main": "app.js",
@@ -12,6 +12,7 @@
   "author": "Rita",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.18.2"
+    "express": "^4.18.2",
+    "express-handlebars": "^7.1.2"
   }
 }
