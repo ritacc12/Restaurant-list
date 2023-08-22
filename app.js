@@ -15,7 +15,6 @@ app.get('/', (req, res) => {
 
 app.get('/restaurant', (req, res) => {
   const keywords = req.query.keyword?.trim()
-  console.log(keywords)
   const matchedRestaurant = keywords?restaurant.filter(target => Object.values(target).some((property) => {
       if (typeof property === 'string') {
         return property.toLowerCase().includes(keywords.toLowerCase())
