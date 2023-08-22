@@ -1,5 +1,6 @@
-<link href="/public/stylesheets/index.css" rel="stylesheet">
 <header>
+    <link href="/stylesheets/index.css" rel="stylesheet">
+
     <!-- navigation -->
     <nav class="navbar navbar-light bg-light">
         <div class="container">
@@ -18,7 +19,7 @@
 <div class="container search-bar">
     <div class="search-bar-outer">
         <div class="search-bar-inner">
-            <form action="/search">
+            <form action="/restaurant">
                 <h4 class="mb-2">尋找餐廳：</h4>
                 <div class="input-group">
                     <input type="text" name="keyword" class="form-control" placeholder="輸入餐廳、分類"
@@ -35,12 +36,11 @@
 
 <!-- restaurant list -->
 <div class="container mt-5">
-    {{#each restaurant as |restaurant|}}
     <div class="row">
         <div class="col-md-10 col-12 mx-auto">
-           
             <div class="row row-cols-sm-3">
-                <a href="/restaurants/{{restaurant.id}}" class="text-secondary">
+                {{#each restaurant as |restaurant|}}
+                <a href="/restaurant/{{restaurant.id}}" class="text-secondary">
                     <div class="card mb-3">
                         <img class="card-img-top"
                             src="{{restaurant.image}}"
@@ -58,8 +58,8 @@
                         </div>
                     </div>
                 </a>
+                {{/each}}
             </div>
-            {{/each}}
         </div>
     </div>
 </div>
