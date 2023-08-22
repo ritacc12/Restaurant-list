@@ -14,21 +14,20 @@ app.get('/', (req, res) => {
 })
 
 app.get('/restaurant', (req, res) => {
-  const keyword = req.query.search?.trim()
-  const Matcheditem = keyword ? restaurant.filter((target) => 
-  Object.values(target).some((property) => {
+  const keywords = req.query.keyword?.trim()
+  console.log(keywords)
+  const matchedRestaurant = keywords?restaurant.filter(target => Object.values(target).some((property) => {
       if (typeof property === 'string') {
-        return property.toLowerCase().includes(keyword.toLowerCase())
-      }
+        return property.toLowerCase().includes(keywords.toLowerCase())
+      }else{
       return false
-    })
-  ) : restaurant
-  res.render('index',{restaurant: Matcheditem , keyword})
+      }})): restaurant
+  res.render('index',{restaurant: matchedRestaurant, keywords})
 })
 
 app.get('/restaurant/:id', (req, res) =>{
   const id = req.params.id
-  const item = restaurant.find((target) => target.id.toString() === id)
+  const item = restaurant.find(target => target.id === Number(id))
   res.render('detail',{item})
 })
 
