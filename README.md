@@ -1,16 +1,14 @@
 # Restaurant List
 
-This project is built with node.js and Express. Allow users browse the restaurants and get the details of the target restaurant
+this project is built with node.js and Express. Allow users browse the restaurants and get the details of the target restaurant
 
 ## Feature
 
 - Check the restaurants list
-- Search the restaurant based on name and category
+- Search the restaurant by name and category
 - Show the information about address,phone, photo etc. for the restaurant
 
-## How to use
-
-### _Installation_
+## Installation
 
 1. Clone the repository
 
