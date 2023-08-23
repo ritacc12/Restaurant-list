@@ -1,5 +1,6 @@
 # Restaurant List
 
+![Image text](https://github.com/ritacc12/IMG/blob/main/Restaurant%20List%20screenshoot.png)
 this project is built with node.js and Express. Allow users browse the restaurants and get the details of the target restaurant
 
 ## Feature
